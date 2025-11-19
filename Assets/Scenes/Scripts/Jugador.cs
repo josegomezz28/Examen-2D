@@ -58,4 +58,24 @@ public class Jugador : MonoBehaviour
             
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.transform.CompareTag("Moneda"))
+    {
+        FindObjectOfType<GameManager>().SumarPuntos();
+        Destroy(collision.gameObject);
+    }
+
+    if (collision.transform.CompareTag("SueloMuerte") || collision.transform.CompareTag("Enemigo"))
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+    if (collision.transform.CompareTag("Meta"))
+    {
+        SceneManager.LoadScene(2);
+    }
+}
 }
