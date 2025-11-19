@@ -8,6 +8,7 @@ public class Jugador : MonoBehaviour
     private float movimientoX;
     public float velocidad = 2;
     private Rigidbody2D rb2d;
+    
 
     [Header("**** Salto ****")]
     public float fuerzaSalto = 2;
@@ -70,6 +71,8 @@ public class Jugador : MonoBehaviour
     if (collision.transform.CompareTag("SueloMuerte") || collision.transform.CompareTag("Enemigo"))
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+
     }
 
 
