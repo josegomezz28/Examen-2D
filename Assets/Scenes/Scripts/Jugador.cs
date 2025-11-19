@@ -75,7 +75,7 @@ public class Jugador : MonoBehaviour
 
     if (collision.transform.CompareTag("Meta"))
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }
 }
